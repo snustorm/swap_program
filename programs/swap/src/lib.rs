@@ -26,4 +26,10 @@ pub mod swap {
         save_offer(ctx, id, token_b_wanted_amount)
 
     }
+
+    pub fn take_offer(ctx: Context<TakeOffer>) -> Result<()> {
+
+        send_wanted_tokens_to_maker(&ctx)?;
+        withdraw_anc_close_vault(ctx)
+    }
 }
