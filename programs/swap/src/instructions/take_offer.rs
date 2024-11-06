@@ -71,7 +71,6 @@ pub struct TakeOffer<'info> {
     )]
     pub vault: InterfaceAccount<'info, TokenAccount>,
     
-
     pub token_program: Interface<'info, TokenInterface>,
     pub associated_token_program: Program<'info, AssociatedToken>,
     pub system_program: Program<'info, System>,
